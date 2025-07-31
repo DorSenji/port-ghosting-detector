@@ -1,10 +1,10 @@
-# 🧠 Code Explained – Port Ghosting Detector
+# Code Explained – Port Ghosting Detector
 
-This document explains how the `ghost_detect.py` script works, line by line, for beginners.
+This document explains, line by line, how the `ghost_detect.py` script works.
 
 ---
 
-## 🔧 Imports
+## Imports
 
 ```python
 import subprocess
@@ -18,41 +18,41 @@ from colorama import Fore, Style, init
 
 ---
 
-## 🎨 Initialize Colorama
+## Initialize Colorama
 
 ```python
 init(autoreset=True)
 ```
 
-- Automatically resets colors after each `print()`, so we don’t have to do it manually.
+- Automatically resets colors after each `print()`, so we don’t have to do it manually (trust me, it's way better like this).
 
 ---
 
-## 💡 print_banner()
+## print_banner()
 
 ```python
 def print_banner():
     ...
 ```
 
-- Prints a colorful ASCII banner when the program starts. Just for style!
+- Prints a colorful ASCII banner when the program starts (just for funsies tbh)
 
 ---
 
-## 🌐 scan_open_ports()
+## scan_open_ports()
 
 ```python
 def scan_open_ports():
     ...
 ```
 
-- Runs `nmap` to scan all TCP ports on localhost.
+- Runs `nmap` to scan all TCP ports on your localhost.
 - Collects all ports reported as "open".
 - Uses regex to find the open ports in `nmap`’s output.
 
 ---
 
-## 🔎 get_listening_ports()
+## get_listening_ports()
 
 ```python
 def get_listening_ports():
@@ -64,7 +64,7 @@ def get_listening_ports():
 
 ---
 
-## ⚖️ Compare the Two
+## Compare the Two
 
 ```python
 ghosted_ports = [port for port in open_ports if port not in listening_ports]
@@ -75,7 +75,7 @@ ghosted_ports = [port for port in open_ports if port not in listening_ports]
 
 ---
 
-## ✅ Final Output
+## Final Output
 
 ```python
 if ghosted_ports:
@@ -89,16 +89,16 @@ else:
 
 ---
 
-## 🛑 Error Handling
+## Error Handling
 
 The script will also catch and report if:
-- `nmap` is not installed
-- `ss` is not installed
+- `nmap` is not installed to make your troubleshooting easier (you're welcome)
+- `ss` is not installed (same here)
 - Any unexpected error happens
 
 ---
 
-## 🖥️ Example Output
+## Example Output
 
 ```
 [+] Scanning localhost using nmap...
@@ -110,6 +110,7 @@ The script will also catch and report if:
 
 ---
 
-## 🧠 Why This File Exists
+## Why This File Exists
 
-This file is here to help beginners understand the code clearly, without needing to know advanced Python or networking tools.
+I am still learning and I always appreciate any kind of knowledge I receive by other coders.
+Wanted to return the favor to the community ;-)
