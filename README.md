@@ -65,6 +65,9 @@ Example output:
 
 🛡️  Scan complete.
 ```
+Here is a brief test I did where I purposely opened the port 12345:
+
+<img width="588" height="353" alt="image" src="https://github.com/user-attachments/assets/f243d8a3-5440-43e7-a7a2-fb3e867f2ca8" />
 
 ---
 
@@ -83,9 +86,8 @@ This is a small project I built to:
 ```
 port-ghosting-detector/
 ├── ghost_detect.py         # Main script to run
-├── requirements.txt        # Python dependency if needed
-├── examples/
-└── README.md
+├── requirements.txt        # Python dependency for colorama if needed
+└── README.md               # Description of everything
 ```
 
 ---
