@@ -87,6 +87,7 @@ This is a small project I built to:
 port-ghosting-detector/
 ├── ghost_detect.py         # Main script to run
 ├── requirements.txt        # Python dependency for colorama if needed
+├── explained_code.md       # Thought it might be nice for any newcomers :)
 └── README.md               # Description of everything
 ```
 
